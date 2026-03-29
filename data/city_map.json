@@ -1,0 +1,1111 @@
+{
+  "intersections": [
+    {
+      "id": "node_0_0",
+      "row": 0,
+      "col": 0,
+      "latitude": 40.73225,
+      "longitude": -74.003
+    },
+    {
+      "id": "node_0_1",
+      "row": 0,
+      "col": 1,
+      "latitude": 40.73225,
+      "longitude": -74.0018
+    },
+    {
+      "id": "node_0_2",
+      "row": 0,
+      "col": 2,
+      "latitude": 40.73225,
+      "longitude": -74.0006
+    },
+    {
+      "id": "node_0_3",
+      "row": 0,
+      "col": 3,
+      "latitude": 40.73225,
+      "longitude": -73.9994
+    },
+    {
+      "id": "node_0_4",
+      "row": 0,
+      "col": 4,
+      "latitude": 40.73225,
+      "longitude": -73.9982
+    },
+    {
+      "id": "node_0_5",
+      "row": 0,
+      "col": 5,
+      "latitude": 40.73225,
+      "longitude": -73.997
+    },
+    {
+      "id": "node_1_0",
+      "row": 1,
+      "col": 0,
+      "latitude": 40.73135,
+      "longitude": -74.003
+    },
+    {
+      "id": "node_1_1",
+      "row": 1,
+      "col": 1,
+      "latitude": 40.73135,
+      "longitude": -74.0018
+    },
+    {
+      "id": "node_1_2",
+      "row": 1,
+      "col": 2,
+      "latitude": 40.73135,
+      "longitude": -74.0006
+    },
+    {
+      "id": "node_1_3",
+      "row": 1,
+      "col": 3,
+      "latitude": 40.73135,
+      "longitude": -73.9994
+    },
+    {
+      "id": "node_1_4",
+      "row": 1,
+      "col": 4,
+      "latitude": 40.73135,
+      "longitude": -73.9982
+    },
+    {
+      "id": "node_1_5",
+      "row": 1,
+      "col": 5,
+      "latitude": 40.73135,
+      "longitude": -73.997
+    },
+    {
+      "id": "node_2_0",
+      "row": 2,
+      "col": 0,
+      "latitude": 40.73045,
+      "longitude": -74.003
+    },
+    {
+      "id": "node_2_1",
+      "row": 2,
+      "col": 1,
+      "latitude": 40.73045,
+      "longitude": -74.0018
+    },
+    {
+      "id": "node_2_2",
+      "row": 2,
+      "col": 2,
+      "latitude": 40.73045,
+      "longitude": -74.0006
+    },
+    {
+      "id": "node_2_3",
+      "row": 2,
+      "col": 3,
+      "latitude": 40.73045,
+      "longitude": -73.9994
+    },
+    {
+      "id": "node_2_4",
+      "row": 2,
+      "col": 4,
+      "latitude": 40.73045,
+      "longitude": -73.9982
+    },
+    {
+      "id": "node_2_5",
+      "row": 2,
+      "col": 5,
+      "latitude": 40.73045,
+      "longitude": -73.997
+    },
+    {
+      "id": "node_3_0",
+      "row": 3,
+      "col": 0,
+      "latitude": 40.72955,
+      "longitude": -74.003
+    },
+    {
+      "id": "node_3_1",
+      "row": 3,
+      "col": 1,
+      "latitude": 40.72955,
+      "longitude": -74.0018
+    },
+    {
+      "id": "node_3_2",
+      "row": 3,
+      "col": 2,
+      "latitude": 40.72955,
+      "longitude": -74.0006
+    },
+    {
+      "id": "node_3_3",
+      "row": 3,
+      "col": 3,
+      "latitude": 40.72955,
+      "longitude": -73.9994
+    },
+    {
+      "id": "node_3_4",
+      "row": 3,
+      "col": 4,
+      "latitude": 40.72955,
+      "longitude": -73.9982
+    },
+    {
+      "id": "node_3_5",
+      "row": 3,
+      "col": 5,
+      "latitude": 40.72955,
+      "longitude": -73.997
+    },
+    {
+      "id": "node_4_0",
+      "row": 4,
+      "col": 0,
+      "latitude": 40.72865,
+      "longitude": -74.003
+    },
+    {
+      "id": "node_4_1",
+      "row": 4,
+      "col": 1,
+      "latitude": 40.72865,
+      "longitude": -74.0018
+    },
+    {
+      "id": "node_4_2",
+      "row": 4,
+      "col": 2,
+      "latitude": 40.72865,
+      "longitude": -74.0006
+    },
+    {
+      "id": "node_4_3",
+      "row": 4,
+      "col": 3,
+      "latitude": 40.72865,
+      "longitude": -73.9994
+    },
+    {
+      "id": "node_4_4",
+      "row": 4,
+      "col": 4,
+      "latitude": 40.72865,
+      "longitude": -73.9982
+    },
+    {
+      "id": "node_4_5",
+      "row": 4,
+      "col": 5,
+      "latitude": 40.72865,
+      "longitude": -73.997
+    },
+    {
+      "id": "node_5_0",
+      "row": 5,
+      "col": 0,
+      "latitude": 40.72775,
+      "longitude": -74.003
+    },
+    {
+      "id": "node_5_1",
+      "row": 5,
+      "col": 1,
+      "latitude": 40.72775,
+      "longitude": -74.0018
+    },
+    {
+      "id": "node_5_2",
+      "row": 5,
+      "col": 2,
+      "latitude": 40.72775,
+      "longitude": -74.0006
+    },
+    {
+      "id": "node_5_3",
+      "row": 5,
+      "col": 3,
+      "latitude": 40.72775,
+      "longitude": -73.9994
+    },
+    {
+      "id": "node_5_4",
+      "row": 5,
+      "col": 4,
+      "latitude": 40.72775,
+      "longitude": -73.9982
+    },
+    {
+      "id": "node_5_5",
+      "row": 5,
+      "col": 5,
+      "latitude": 40.72775,
+      "longitude": -73.997
+    }
+  ],
+  "roads": [
+    {
+      "id": "r_0_0_0_1",
+      "from": "node_0_0",
+      "to": "node_0_1",
+      "length": 101.11,
+      "status": "open"
+    },
+    {
+      "id": "r_0_1_0_2",
+      "from": "node_0_1",
+      "to": "node_0_2",
+      "length": 101.11,
+      "status": "open"
+    },
+    {
+      "id": "r_0_2_0_3",
+      "from": "node_0_2",
+      "to": "node_0_3",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_3_0_4",
+      "from": "node_0_3",
+      "to": "node_0_4",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_4_0_5",
+      "from": "node_0_4",
+      "to": "node_0_5",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_0_1_1",
+      "from": "node_1_0",
+      "to": "node_1_1",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_1_1_2",
+      "from": "node_1_1",
+      "to": "node_1_2",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_2_1_3",
+      "from": "node_1_2",
+      "to": "node_1_3",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_3_1_4",
+      "from": "node_1_3",
+      "to": "node_1_4",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_4_1_5",
+      "from": "node_1_4",
+      "to": "node_1_5",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_0_2_1",
+      "from": "node_2_0",
+      "to": "node_2_1",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_1_2_2",
+      "from": "node_2_1",
+      "to": "node_2_2",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_2_2_3",
+      "from": "node_2_2",
+      "to": "node_2_3",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_3_2_4",
+      "from": "node_2_3",
+      "to": "node_2_4",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_4_2_5",
+      "from": "node_2_4",
+      "to": "node_2_5",
+      "length": 101.11,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_0_3_1",
+      "from": "node_3_0",
+      "to": "node_3_1",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_1_3_2",
+      "from": "node_3_1",
+      "to": "node_3_2",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_2_3_3",
+      "from": "node_3_2",
+      "to": "node_3_3",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_3_3_4",
+      "from": "node_3_3",
+      "to": "node_3_4",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_4_3_5",
+      "from": "node_3_4",
+      "to": "node_3_5",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_0_4_1",
+      "from": "node_4_0",
+      "to": "node_4_1",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_1_4_2",
+      "from": "node_4_1",
+      "to": "node_4_2",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_2_4_3",
+      "from": "node_4_2",
+      "to": "node_4_3",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_3_4_4",
+      "from": "node_4_3",
+      "to": "node_4_4",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_4_4_5",
+      "from": "node_4_4",
+      "to": "node_4_5",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_5_0_5_1",
+      "from": "node_5_0",
+      "to": "node_5_1",
+      "length": 101.12,
+      "status": "open"
+    },
+    {
+      "id": "r_5_1_5_2",
+      "from": "node_5_1",
+      "to": "node_5_2",
+      "length": 101.12,
+      "status": "open"
+    },
+    {
+      "id": "r_5_2_5_3",
+      "from": "node_5_2",
+      "to": "node_5_3",
+      "length": 101.12,
+      "status": "open"
+    },
+    {
+      "id": "r_5_3_5_4",
+      "from": "node_5_3",
+      "to": "node_5_4",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_5_4_5_5",
+      "from": "node_5_4",
+      "to": "node_5_5",
+      "length": 101.12,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_0_1_0",
+      "from": "node_0_0",
+      "to": "node_1_0",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_1_1_1",
+      "from": "node_0_1",
+      "to": "node_1_1",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_2_1_2",
+      "from": "node_0_2",
+      "to": "node_1_2",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_3_1_3",
+      "from": "node_0_3",
+      "to": "node_1_3",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_4_1_4",
+      "from": "node_0_4",
+      "to": "node_1_4",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_0_5_1_5",
+      "from": "node_0_5",
+      "to": "node_1_5",
+      "length": 100.08,
+      "status": "open"
+    },
+    {
+      "id": "r_1_0_2_0",
+      "from": "node_1_0",
+      "to": "node_2_0",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_1_2_1",
+      "from": "node_1_1",
+      "to": "node_2_1",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_2_2_2",
+      "from": "node_1_2",
+      "to": "node_2_2",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_3_2_3",
+      "from": "node_1_3",
+      "to": "node_2_3",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_4_2_4",
+      "from": "node_1_4",
+      "to": "node_2_4",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_1_5_2_5",
+      "from": "node_1_5",
+      "to": "node_2_5",
+      "length": 100.08,
+      "status": "open"
+    },
+    {
+      "id": "r_2_0_3_0",
+      "from": "node_2_0",
+      "to": "node_3_0",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_1_3_1",
+      "from": "node_2_1",
+      "to": "node_3_1",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_2_3_2",
+      "from": "node_2_2",
+      "to": "node_3_2",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_3_3_3",
+      "from": "node_2_3",
+      "to": "node_3_3",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_4_3_4",
+      "from": "node_2_4",
+      "to": "node_3_4",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_2_5_3_5",
+      "from": "node_2_5",
+      "to": "node_3_5",
+      "length": 100.08,
+      "status": "open"
+    },
+    {
+      "id": "r_3_0_4_0",
+      "from": "node_3_0",
+      "to": "node_4_0",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_1_4_1",
+      "from": "node_3_1",
+      "to": "node_4_1",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_2_4_2",
+      "from": "node_3_2",
+      "to": "node_4_2",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_3_4_3",
+      "from": "node_3_3",
+      "to": "node_4_3",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_4_4_4",
+      "from": "node_3_4",
+      "to": "node_4_4",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_3_5_4_5",
+      "from": "node_3_5",
+      "to": "node_4_5",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_0_5_0",
+      "from": "node_4_0",
+      "to": "node_5_0",
+      "length": 100.08,
+      "status": "open"
+    },
+    {
+      "id": "r_4_1_5_1",
+      "from": "node_4_1",
+      "to": "node_5_1",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_2_5_2",
+      "from": "node_4_2",
+      "to": "node_5_2",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_3_5_3",
+      "from": "node_4_3",
+      "to": "node_5_3",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_4_5_4",
+      "from": "node_4_4",
+      "to": "node_5_4",
+      "length": 100.08,
+      "status": "blocked"
+    },
+    {
+      "id": "r_4_5_5_5",
+      "from": "node_4_5",
+      "to": "node_5_5",
+      "length": 100.08,
+      "status": "blocked"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "b_00",
+      "name": "City Hall",
+      "type": "government",
+      "floors": 4,
+      "center_latitude": 40.7318,
+      "center_longitude": -74.0024,
+      "bounds": {
+        "north": 40.732115,
+        "south": 40.731485,
+        "west": -74.00282,
+        "east": -74.00198
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_01",
+      "name": "Library",
+      "type": "civic",
+      "floors": 3,
+      "center_latitude": 40.7318,
+      "center_longitude": -74.0012,
+      "bounds": {
+        "north": 40.732115,
+        "south": 40.731485,
+        "west": -74.00162,
+        "east": -74.00078
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_02",
+      "name": "Police Station",
+      "type": "civic",
+      "floors": 3,
+      "center_latitude": 40.7318,
+      "center_longitude": -74.0,
+      "bounds": {
+        "north": 40.732115,
+        "south": 40.731485,
+        "west": -74.00042,
+        "east": -73.99958
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_03",
+      "name": "Fire Station 1",
+      "type": "civic",
+      "floors": 2,
+      "center_latitude": 40.7318,
+      "center_longitude": -73.9988,
+      "bounds": {
+        "north": 40.732115,
+        "south": 40.731485,
+        "west": -73.99922,
+        "east": -73.99838
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_04",
+      "name": "Hospital 1",
+      "type": "healthcare",
+      "floors": 6,
+      "center_latitude": 40.7318,
+      "center_longitude": -73.9976,
+      "bounds": {
+        "north": 40.732115,
+        "south": 40.731485,
+        "west": -73.99802,
+        "east": -73.99718
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_05",
+      "name": "Hotel",
+      "type": "commercial",
+      "floors": 8,
+      "center_latitude": 40.7309,
+      "center_longitude": -74.0024,
+      "bounds": {
+        "north": 40.731215,
+        "south": 40.730585,
+        "west": -74.00282,
+        "east": -74.00198
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_06",
+      "name": "Market Tower",
+      "type": "commercial",
+      "floors": 12,
+      "center_latitude": 40.7309,
+      "center_longitude": -74.0012,
+      "bounds": {
+        "north": 40.731215,
+        "south": 40.730585,
+        "west": -74.00162,
+        "east": -74.00078
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_07",
+      "name": "Bank",
+      "type": "commercial",
+      "floors": 5,
+      "center_latitude": 40.7309,
+      "center_longitude": -74.0,
+      "bounds": {
+        "north": 40.731215,
+        "south": 40.730585,
+        "west": -74.00042,
+        "east": -73.99958
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_08",
+      "name": "Post Office",
+      "type": "civic",
+      "floors": 2,
+      "center_latitude": 40.7309,
+      "center_longitude": -73.9988,
+      "bounds": {
+        "north": 40.731215,
+        "south": 40.730585,
+        "west": -73.99922,
+        "east": -73.99838
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_09",
+      "name": "School A",
+      "type": "education",
+      "floors": 3,
+      "center_latitude": 40.7309,
+      "center_longitude": -73.9976,
+      "bounds": {
+        "north": 40.731215,
+        "south": 40.730585,
+        "west": -73.99802,
+        "east": -73.99718
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_10",
+      "name": "Community Center",
+      "type": "civic",
+      "floors": 2,
+      "center_latitude": 40.73,
+      "center_longitude": -74.0024,
+      "bounds": {
+        "north": 40.730315,
+        "south": 40.729685,
+        "west": -74.00282,
+        "east": -74.00198
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_11",
+      "name": "Hospital 2",
+      "type": "commercial",
+      "floors": 10,
+      "center_latitude": 40.73,
+      "center_longitude": -74.0012,
+      "bounds": {
+        "north": 40.730315,
+        "south": 40.729685,
+        "west": -74.00162,
+        "east": -74.00078
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_12",
+      "name": "Power Station",
+      "type": "utility",
+      "floors": 2,
+      "center_latitude": 40.73,
+      "center_longitude": -74.0,
+      "bounds": {
+        "north": 40.730315,
+        "south": 40.729685,
+        "west": -74.00042,
+        "east": -73.99958
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_13",
+      "name": "Water Plant",
+      "type": "utility",
+      "floors": 2,
+      "center_latitude": 40.73,
+      "center_longitude": -73.9988,
+      "bounds": {
+        "north": 40.730315,
+        "south": 40.729685,
+        "west": -73.99922,
+        "east": -73.99838
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_14",
+      "name": "School B",
+      "type": "education",
+      "floors": 3,
+      "center_latitude": 40.73,
+      "center_longitude": -73.9976,
+      "bounds": {
+        "north": 40.730315,
+        "south": 40.729685,
+        "west": -73.99802,
+        "east": -73.99718
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_15",
+      "name": "Apartment 1",
+      "type": "residential",
+      "floors": 7,
+      "center_latitude": 40.7291,
+      "center_longitude": -74.0024,
+      "bounds": {
+        "north": 40.729415,
+        "south": 40.728785,
+        "west": -74.00282,
+        "east": -74.00198
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_16",
+      "name": "Apartment 2",
+      "type": "residential",
+      "floors": 6,
+      "center_latitude": 40.7291,
+      "center_longitude": -74.0012,
+      "bounds": {
+        "north": 40.729415,
+        "south": 40.728785,
+        "west": -74.00162,
+        "east": -74.00078
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_17",
+      "name": "Apartment 3",
+      "type": "residential",
+      "floors": 9,
+      "center_latitude": 40.7291,
+      "center_longitude": -74.0,
+      "bounds": {
+        "north": 40.729415,
+        "south": 40.728785,
+        "west": -74.00042,
+        "east": -73.99958
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_18",
+      "name": "Office",
+      "type": "commercial",
+      "floors": 11,
+      "center_latitude": 40.7291,
+      "center_longitude": -73.9988,
+      "bounds": {
+        "north": 40.729415,
+        "south": 40.728785,
+        "west": -73.99922,
+        "east": -73.99838
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_19",
+      "name": "Warehouse",
+      "type": "industrial",
+      "floors": 2,
+      "center_latitude": 40.7291,
+      "center_longitude": -73.9976,
+      "bounds": {
+        "north": 40.729415,
+        "south": 40.728785,
+        "west": -73.99802,
+        "east": -73.99718
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_20",
+      "name": "Techno Park",
+      "type": "civic",
+      "floors": 3,
+      "center_latitude": 40.7282,
+      "center_longitude": -74.0024,
+      "bounds": {
+        "north": 40.728515,
+        "south": 40.727885,
+        "west": -74.00282,
+        "east": -74.00198
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_21",
+      "name": "Civic Arena",
+      "type": "civic",
+      "floors": 5,
+      "center_latitude": 40.7282,
+      "center_longitude": -74.0012,
+      "bounds": {
+        "north": 40.728515,
+        "south": 40.727885,
+        "west": -74.00162,
+        "east": -74.00078
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_22",
+      "name": "Media HeadQuater",
+      "type": "commercial",
+      "floors": 4,
+      "center_latitude": 40.7282,
+      "center_longitude": -74.0,
+      "bounds": {
+        "north": 40.728515,
+        "south": 40.727885,
+        "west": -74.00042,
+        "east": -73.99958
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_23",
+      "name": "Research Lab",
+      "type": "research",
+      "floors": 4,
+      "center_latitude": 40.7282,
+      "center_longitude": -73.9988,
+      "bounds": {
+        "north": 40.728515,
+        "south": 40.727885,
+        "west": -73.99922,
+        "east": -73.99838
+      },
+      "status": "damaged",
+      "crack_prob": 0.98,
+      "inspected": false
+    },
+    {
+      "id": "b_24",
+      "name": "Emergency Shelter",
+      "type": "civic",
+      "floors": 2,
+      "center_latitude": 40.7282,
+      "center_longitude": -73.9976,
+      "bounds": {
+        "north": 40.728515,
+        "south": 40.727885,
+        "west": -73.99802,
+        "east": -73.99718
+      },
+      "status": "evacuate",
+      "crack_prob": 0.98,
+      "inspected": false
+    }
+  ],
+  "meta": {
+    "center_latitude": 40.73,
+    "center_longitude": -74.0,
+    "grid_rows": 5,
+    "grid_cols": 5
+  }
+}

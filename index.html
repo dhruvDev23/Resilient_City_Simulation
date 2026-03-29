@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resilient City Simulation</title>
+    <meta name="description" content="Urban simulation for earthquake resilience and crack detection." />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-title">Resilient City <span>Simulation</span></div>
+        </div>
+        <div id="sys-status" class="sbadge normal">
+            <span>System Normal</span>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside>
+            <!-- City Overview - using section vs div asymmetry -->
+            <section class="status-section box1">
+                <div class="panel-title" style="padding-bottom: 4px;">City Overview</div>
+                <div class="sgrid">
+                    <div class="statThing total-stat stat-box total" style="padding: 10px;">
+                        <div id="st-total" class="sval">—</div>
+                        <div class="slbl">Total Buildings</div>
+                    </div>
+                    <div class="safeBoxFinal stat-box safe sb-plain" style="padding: 8px;">
+                        <div id="st-safe" class="sval">—</div>
+                        <div class="slbl">Safe</div>
+                    </div>
+                    <div class="tmpStat stat-box damaged">
+                        <div id="st-dmg" class="sval">—</div>
+                        <div class="slbl">Damaged</div>
+                    </div>
+                    <div class="stat-box evacuate" data-test="just-in-case">
+                        <div id="st-evac" class="sval">—</div>
+                        <div class="slbl">Evacuate</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trigger Earthquake (manual test) - using h3 instead of div asym -->
+            <div class="ss eq-panel-container" style="margin-top: 1.2rem;">
+                <h3 style="font-size: 0.85rem; margin-bottom: 0.6rem; color: #a1a1aa; font-weight: 600;">Trigger
+                    Earthquake (manual test)</h3>
+                <div class="eq-panel">
+                    <div class="mag-row">
+                        <span class="mag-label">Magnitude</span>
+                        <span id="mag-display" class="mag-val">5.0</span>
+                    </div>
+                    <input id="mag-slider" class="magSlider" type="range" min="1" max="9" step="0.1" value="5" />
+                    <!-- legend for slider - changed this naming yesterday, not sure if better tbh -->
+                    <div class="mag-scale">
+                        <span>1 Minor</span>
+                        <span>4 Light</span>
+                        <span>6 Strong</span>
+                        <span>9 Major</span>
+                    </div>
+                    <div class="btn-row">
+                        <button id="btn-eq" class="btn btn-danger btnTrigger">⚡ Trigger</button>
+                        <button id="btn-reset" class="btn btn-ghost btn-sm">Reset City</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Path Finder (WIP) - using p for title asymmetry -->
+            <div class="box route-box ss">
+                <p class="st" style="margin-bottom: 0.5rem; font-weight: 600; color: #facc15;">Path Finder (WIP)</p>
+                <div class="rinputs">
+                    <div class="wrapper-fix">
+                        <div class="rlbl">SOURCE intersection</div>
+                        <div id="src-display" class="rval">Click an intersection dot on the map…</div>
+                    </div>
+                    <div class="tmp-holder" style="height: 6px;"></div>
+                    <div>
+                        <div class="rlbl">DESTINATION intersection</div>
+                        <div id="dst-display" class="rval">Then click a second dot…</div>
+                    </div>
+                </div>
+                <!-- used to be 0, changed it - leaving for now in case layout breaks -->
+                <div id="dist-display" style="display:none" class="routePill route-thing">📍 <span
+                        id="dist-val">--</span> m</div>
+                <div class="btn-row" style="margin-top:.7rem">
+                    <button id="btn-route" class="btn btnMain btn-sm" disabled="true">Find Route</button>
+                    <button id="btn-route-reset" class="btn btn-ghost btn-sm">Clear</button>
+                </div>
+            </div>
+
+            <!-- Legend (Moved order for "testing something") -->
+            <div class="ss legend-container"
+                style="background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+                <div class="st">Legend</div>
+                <div class="legend-items-wrapper">
+                    <div class="li">
+                        <div class="sw sw-safe"></div>Safe
+                    </div>
+                    <div class="li">
+                        <div class="sw sw-damaged"></div>Damaged / Re-Inspect
+                    </div>
+                    <div class="li">
+                        <div class="sw sw-evacuate"></div>Evacuate
+                    </div>
+                    <div class="li">
+                        <div class="sw sw-route"></div>Calculated Route
+                    </div>
+                    <div class="li">
+                        <div class="sw sw-blocked"></div>Blocked Road
+                    </div>
+                    <div class="li">
+                        <div class="sw sw-road"></div>Open Road
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details - minimal compared to Legend to break visual balance -->
+            <div class="ss info-panel">
+                <div class="st">Details</div>
+                <div id="binfo" class="ibox">Click a building to view details.</div>
+            </div>
+
+            <!-- future me: clean this up before demo or not. -->
+            <!-- tried using a modal here but scrapped it -->
+        </aside>
+
+        <main class="map-view">
+            <!-- redundant wrapper inner nesting - AI hates this, humans keep it for "safety" -->
+            <div class="map-wrapper" style="height: 100%; width: 100%;">
+                <div class="map-inner-container" style="height: 100%;">
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <div class="tmp-holder"></div> <!-- why is this here? -->
+
+            <!-- Abandoned debug fragment
+            <div class="debug-overlay" style="display:none">
+                <div id="debug-coords">0.0, 0.0</div>
+            </div>
+            -->
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
