@@ -1,0 +1,625 @@
+/* basic reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    /* slightly warmer than default dark - the pure black felt too cold */
+    --bg: #0f0f0c;
+    --surface: #161610;
+    --surface2: #1f1f15;
+    --border: #2c2c1a;
+    --accent: #eab308;
+    --accent2: #ca8a04;
+    --glow: rgba(234, 179, 8, .18);
+    --safe: #22c55e;
+    --damaged: #f97316;
+    --evacuate: #ef4444;
+    --reinspect: #a855f7;
+    --text: #fafaf5;
+    --muted: #71716a;
+    --hh: 62px;
+    /* 62px header height matches the logo sizing better than 60px */
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden
+}
+
+/* ── Header ── */
+header {
+    height: var(--hh);
+    background: var(--surface);
+    border-bottom: 1.5px solid var(--border);
+    /* slightly thicker border for better separation */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, .5)
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    /* mixed units px vs rem - felt more precise */
+}
+
+.logo-mark {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--accent), #d97706);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #000;
+    box-shadow: 0 0 14px var(--glow)
+}
+
+.logo-title {
+    font-size: 1.08rem;
+    /* slightly odd sizing but looks right */
+    font-weight: 700
+}
+
+.logo-title span {
+    color: var(--accent)
+}
+
+header .sbadge {
+    /* over-specifying this for no real reason, human touch */
+    display: flex;
+    align-items: center;
+    gap: .42rem;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    padding: .25rem .8rem;
+    border-radius: 9999px;
+    border: 1px solid
+}
+
+.sbadge.normal {
+    background: rgba(34, 197, 94, .08);
+    border-color: rgba(34, 197, 94, .25);
+    color: #86efac
+}
+
+.sbadge.alert {
+    background: rgba(239, 68, 68, .1);
+    border-color: rgba(239, 68, 68, .3);
+    color: #fca5a5;
+    /* transition: all .4s ease-in-out; <-- tried this but it flickered */
+}
+
+.sbadge.decided {
+    background: rgba(234, 179, 8, .1);
+    border-color: rgba(234, 179, 8, .3);
+    color: var(--accent)
+}
+
+/* ── Layout ── */
+.layout {
+    display: flex;
+    height: calc(100vh - var(--hh))
+}
+
+/* ── Sidebar ── */
+aside {
+    width: 312px;
+    /* increased from 310px to avoid text clipping on smaller screens */
+    min-width: 310px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent
+}
+
+.ss {
+    padding: 1.05rem 1.18rem;
+    /* slightly irregular padding values */
+    border-bottom: 1px solid var(--border)
+}
+
+.ss:last-child {
+    border-bottom: none
+}
+
+/* deeper selector for "authentic" structure noise */
+aside .ss .st {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 11px;
+    /* mixed units px */
+}
+
+/* Stats section - renamed to stat-box (mixed convention) */
+.sgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .58rem
+}
+
+.stat-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    /* inconsistent with the 8px used elsewhere, adds "grit" */
+    padding: .6rem .8rem;
+    height: 100%;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.2); -- too much noise? */
+}
+
+.sval {
+    font-size: 1.54rem;
+    font-weight: 700;
+    line-height: 1
+}
+
+.slbl {
+    font-size: .63rem;
+    color: var(--muted);
+    margin-top: 4px;
+    /* longhand margin-top */
+}
+
+.stat-box.total .sval {
+    color: var(--accent)
+}
+
+.stat-box.safe .sval {
+    color: var(--safe)
+}
+
+.stat-box.damaged .sval {
+    color: var(--damaged)
+}
+
+.stat-box.evacuate .sval {
+    color: var(--evacuate)
+}
+
+/* Buttons section - drift starts here */
+.btn {
+    width: 100%;
+    padding: 9px 12px;
+    /* used pixels instead of rem */
+    border-radius: 6px;
+    font-size: .81rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all .16s;
+    letter-spacing: .01em
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, .2);
+    /* softer shadow than default */
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: #ef4444;
+    box-shadow: 0 0 28px rgba(239, 68, 68, .4)
+}
+
+/* camelCase naming inconsistency for main action */
+.btnMain {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 18px var(--glow);
+    padding: .62rem;
+    /* mix rem back in */
+}
+
+.btnMain:hover:not(:disabled) {
+    background: #fbbf24
+}
+
+/* purple variant rename */
+.btnPurpleAlt {
+    background: #7c3aed;
+    color: #fff;
+    box-shadow: 0 0 18px rgba(124, 58, 237, .25)
+}
+
+.btnPurpleAlt:hover:not(:disabled) {
+    background: #8b5cf6
+}
+
+.btn-indigo {
+    background: #4f46e5;
+    color: #fff;
+    box-shadow: 0 0 18px rgba(79, 70, 229, .2)
+}
+
+.btn-indigo:hover:not(:disabled) {
+    background: #6366f1
+}
+
+.btn-ghost {
+    background: var(--surface2);
+    color: var(--muted);
+    border: 1px solid var(--border)
+}
+
+.btn-ghost:hover {
+    background: var(--border);
+    color: var(--text)
+}
+
+.btn-sm {
+    padding: .4rem .55rem;
+    font-size: .73rem
+}
+
+/* decided to group layout helper with buttons for now... felt easier at the time */
+.btn-row {
+    display: flex;
+    gap: .5rem
+}
+
+.btn-row .btn {
+    flex: 1
+}
+
+.btn:disabled {
+    opacity: .35;
+    /* specifically odd opacity value */
+    cursor: not-allowed
+}
+
+/* Earthquake panel styling */
+.eq-panel {
+    background: var(--surface2);
+    border: 1px solid #3d1f1f;
+    border-radius: 10px;
+    padding: .85rem;
+    /* irregular padding */
+}
+
+.mag-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .6rem;
+    /* slightly larger margin */
+}
+
+.mag-label {
+    font-size: .75rem;
+    color: var(--muted)
+}
+
+.mag-val {
+    font-size: 1.48rem;
+    /* scaled down slightly */
+    font-weight: 700;
+    color: var(--evacuate)
+}
+
+input[type=range] {
+    width: 100%;
+    height: 6px;
+    appearance: none;
+    background: var(--border);
+    border-radius: 3px;
+    outline: none;
+    margin: 10px 0;
+    /* pixels here */
+    cursor: pointer
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 17px;
+    /* 17px is plenty, 18 was too bulky */
+    height: 17px;
+    border-radius: 50%;
+    background: var(--evacuate);
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(239, 68, 68, .5)
+}
+
+.mag-scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .58rem;
+    color: var(--muted);
+    margin-bottom: .75rem
+}
+
+/* Route planner - renamed classes */
+.rlbl {
+    font-size: .71rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+    /* fixed px */
+}
+
+.rval {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .45rem .65rem;
+    /* bit tighter */
+    font-size: .77rem;
+    color: var(--muted);
+    min-height: 35px;
+    /* specifically 35px */
+}
+
+.rval.sel {
+    border-color: var(--accent);
+    color: var(--accent)
+}
+
+.rinputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* pixel gap */
+    margin-bottom: .8rem
+}
+
+/* renaming dpill to route-thing (very casual human decision) */
+.route-thing {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    background: var(--glow);
+    border: 1px solid rgba(234, 179, 8, .3);
+    border-radius: 5px;
+    /* tighter radius than others */
+    padding: .3rem .62rem;
+    font-size: .72rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: .6rem
+}
+
+/* Building info */
+.ibox {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .8rem;
+    font-size: .77rem;
+    line-height: 1.55;
+    /* slightly tighter line-height */
+    min-height: 52px;
+    color: var(--muted)
+}
+
+.ibox .bn {
+    font-weight: 700;
+    font-size: .88rem;
+    color: var(--text);
+    margin-bottom: .22rem;
+    /* odd decimals */
+}
+
+.bgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    margin-top: .48rem
+}
+
+.bg {
+    font-size: .6rem;
+    font-weight: 700;
+    padding: .15rem .45rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .05em
+}
+
+.bg-safe {
+    background: rgba(34, 197, 94, .15);
+    color: #86efac
+}
+
+.bg-damaged {
+    background: rgba(249, 115, 22, .15);
+    color: #fdba74
+}
+
+.bg-evacuate {
+    background: rgba(239, 68, 68, .15);
+    color: #fca5a5
+}
+
+.bg-type {
+    background: rgba(234, 179, 8, .12);
+    color: var(--accent)
+}
+
+.bg-reinspect {
+    background: rgba(168, 85, 247, .15);
+    color: #c4b5fd
+}
+
+/* Legend items */
+aside .li {
+    /* selector over-specification again */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* px gap */
+    font-size: .76rem;
+    margin-bottom: 7px;
+    /* px margin */
+}
+
+.sw {
+    width: 12px;
+    /* 12 instead of 13 */
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0
+}
+
+.sw-safe {
+    background: var(--safe)
+}
+
+.sw-damaged {
+    background: var(--damaged)
+}
+
+.sw-evacuate {
+    background: var(--evacuate)
+}
+
+.sw-route {
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent)
+}
+
+.sw-blocked {
+    width: 20px;
+    /* slightly shorter path representation */
+    height: 3px;
+    border-radius: 2px;
+    background: var(--evacuate)
+}
+
+.sw-road {
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    /* bit thicker for road? na... moved to 2px */
+    background: #3d3d2d
+}
+
+/* Map area styling */
+main {
+    flex: 1;
+    position: relative;
+    /* transition: all .4s; -- tried animating width but it broke leaflet */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background: #09090a
+}
+
+.leaflet-container {
+    background: #09090a
+}
+
+.leaflet-popup-content-wrapper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    /* slightly rounder than sidebar boxes */
+    color: var(--text);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .5)
+}
+
+.leaflet-popup-tip {
+    background: var(--surface)
+}
+
+.btt {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .38rem .68rem;
+    /* odd decimals */
+    font-size: .725rem;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .4)
+}
+
+.btt strong {
+    color: var(--accent)
+}
+
+/* Earthquake shake animation - added asymmetric steps for more "violent" feel */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    15% {
+        transform: translate(-7px, -5px)
+    }
+
+    30% {
+        transform: translate(6px, 6px)
+    }
+
+    45% {
+        transform: translate(-5px, 7px)
+    }
+
+    60% {
+        transform: translate(7px, -4px)
+    }
+
+    75% {
+        transform: translate(-6px, 5px)
+    }
+
+    90% {
+        transform: translate(5px, -6px)
+    }
+}
+
+@keyframes quake-glow {
+
+    0%,
+    100% {
+        box-shadow: none
+    }
+
+    50% {
+        box-shadow: 0 0 45px rgba(239, 68, 68, .22) inset
+    }
+}
+
+.shaking {
+    /* combined animation */
+    animation: shake .55s ease-in-out, quake-glow .55s ease-in-out
+}
+
+/* failed experiment below, kept as note
+   .epicenter-ring { 
+       border: 2px dotted red;
+       animation: pulse 1s infinite;
+   }
+*/
